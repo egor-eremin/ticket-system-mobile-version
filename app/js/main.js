@@ -28,4 +28,54 @@ $(document).ready(function () {
             minDate: new Date(),
         });
     })();
+    (function addAnimationTap() {
+        $('.menu-ticket').on('click', function () {
+           $(this).addClass("animate");
+        });
+    })();
+    (function validateForm() {
+        $(".add-form").validate({
+        });
+        jQuery.extend(jQuery.validator.messages, {
+            required: "Это поле необходимо заполнить",
+            email:'Введите корректный E-mail',
+        });
+    })();
+    $( document ).ajaxSend(function() {
+        $('.preloder').addClass('animated');
+    });
+    $( document ).ajaxStop(function() {
+        $('.preloder').removeClass('animated');
+    });
+    (function callbackModal() {
+        $('.callback-link').magnificPopup({
+            type:"inline",
+        });
+    })();
+    (function validationCallbackModal() {
+        $('.callback-form').validate({});
+        $('.callback-form button[type="submit"]').on('click', function () {
+            if (!$('.callback-form').valid()) return false;
+        });
+    })();
+    (function showPopupMenu() {
+        $('.menu-footer').on('click', function () {
+            if ($('.footer-menu').hasClass('menu-footer_show')) {
+                $('.footer-menu').removeClass('menu-footer_show');
+                $('.close-wrapper').removeClass('active');
+            } else {
+                $('.footer-menu').addClass('menu-footer_show');
+                $('.close-wrapper').addClass('active');
+            }
+        });
+    })();
+});
+BX.ready(function(){
+    loader = BX('preloder');
+    BX.showWait = function(node, msg) {
+        $('.preloder').addClass('animated');
+    };
+    BX.closeWait = function(node, obMsg) {
+        $('.preloder').removeClass('animated');
+    };
 });
