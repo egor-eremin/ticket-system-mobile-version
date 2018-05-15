@@ -91,7 +91,7 @@ $(document).ready(function () {
             $('.footer-menu').removeClass('show-notice');
             $('.menu-saidbar').removeClass('active');
         });
-    })()
+    })();
 });
 BX.ready(function(){
     loader = BX('preloder');
