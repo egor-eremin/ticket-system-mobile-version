@@ -95,24 +95,26 @@
                         </div>
                         <div class="add-form__item">
                 <label class="form-label form-label__datapicker">
-                    Желаемая дата выполнения задачи:
-                    <input type="text" readonly class="add-form__datapicker" name="desired-date">
-                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 426.667 426.667" style="enable-background:new 0 0 426.667 426.667;" xml:space="preserve">
-                                    <g>
+                    <span class="form-label__datapicker-text">Желаемая дата выполнения задачи:</span>
+                    <span class="form-label__datapicker-date">
+                        <input type="text" readonly class="add-form__datapicker" name="desired-date">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 426.667 426.667" style="enable-background:new 0 0 426.667 426.667;" xml:space="preserve">
                                         <g>
                                             <g>
-                                                <path d="M362.667,42.667h-21.333V0h-42.667v42.667H128V0H85.333v42.667H64c-23.573,0-42.453,19.093-42.453,42.667L21.333,384     c0,23.573,19.093,42.667,42.667,42.667h298.667c23.573,0,42.667-19.093,42.667-42.667V85.333     C405.333,61.76,386.24,42.667,362.667,42.667z M362.667,384H64V149.333h298.667V384z"/>
-                                                <polygon points="309.973,214.613 287.36,192 183.253,296.107 138.027,250.88 115.413,273.493 183.253,341.333    "/>
+                                                <g>
+                                                    <path d="M362.667,42.667h-21.333V0h-42.667v42.667H128V0H85.333v42.667H64c-23.573,0-42.453,19.093-42.453,42.667L21.333,384     c0,23.573,19.093,42.667,42.667,42.667h298.667c23.573,0,42.667-19.093,42.667-42.667V85.333     C405.333,61.76,386.24,42.667,362.667,42.667z M362.667,384H64V149.333h298.667V384z"/>
+                                                    <polygon points="309.973,214.613 287.36,192 183.253,296.107 138.027,250.88 115.413,273.493 183.253,341.333    "/>
+                                                </g>
                                             </g>
                                         </g>
-                                    </g>
-                                </svg>
+                                    </svg>
+                    </span>
                 </label>
             </div>
                         <div class="add-form__item">
                             <textarea required placeholder="Введите текст обращения:" name="ticket-text"></textarea>
                         </div>
-                        <div class="add-form__item add-form__item_with-margin">
+                        <div class="add-form__item add-form__add-file add-form__item_with-margin">
                             <div class="custom-input-file">
                                 <input multiple type="file" name="additional-file" id="additional-file-input">
                                 <label class="custom-input-file__label" for="additional-file-input">
@@ -131,7 +133,7 @@
                                 файлы не выбраны
                             </div>
                         </div>
-                        <button class="button button-green button-small">Создать новое обращение</button>
+            <div class="add-form__item add-form__button"><button class="button button-green button-small">Создать новое обращение</button></div>
                     </form>
     </div>
 </main>
@@ -296,6 +298,319 @@
         </g></svg>
 </div>
 <a href="#" class="close-wrapper"></a>
+<div class="menu-saidbar">
+    <div class="menu-saidbar__close">
+        <a href="#" class="menu-saidbar__close-wrapper">
+
+        </a>
+    </div>
+    <div class="menu-saidbar__menu">
+        <div class="menu-saidbar__wrapper">
+            <div class="menu-saidbar__header">
+                <div class="menu-saidbar__title new-notice">
+                    Уведомления
+                </div>
+                <div class="menu-saidbar__close-button">
+                    <span class="menu-saidbar__close-span"></span>
+                    <span class="menu-saidbar__close-span"></span>
+                </div>
+            </div>
+            <div class="menu-saidbar__notice">
+                <div class="menu-saidbar__notice-item notice-new">
+                    <div class="menu-saidbar__notice-title">
+                        Приближается крайний срок
+                    </div>
+                    <div class="menu-saidbar__notice-text">
+                        <div class="menu-saidbar__sub-title">
+                            "Тестируем обращение" (Flyboots):
+                        </div>
+                        Крайний срок обращения "Несвободный тикет №101" (ООО "Фанат") истечёт <b>06.12.2017</b>
+                    </div>
+                    <div class="menu-saidbar__notice-time">
+                        <div class="menu-saidbar__notice-clock">16:27:12</div>
+                        <div class="menu-saidbar__notice-date">06.12.2017</div>
+                    </div>
+                </div>
+                <div class="menu-saidbar__notice-item notice-new">
+                    <div class="menu-saidbar__notice-title">
+                        Приближается крайний срок
+                    </div>
+                    <div class="menu-saidbar__notice-text">
+                        Крайний срок обращения "Несвободный тикет №101" (ООО "Фанат") истечёт <b>06.12.2017</b>
+                    </div>
+                    <div class="menu-saidbar__notice-time">
+                        <div class="menu-saidbar__notice-clock">16:27:12</div>
+                        <div class="menu-saidbar__notice-date">06.12.2017</div>
+                    </div>
+                </div>
+                <div class="menu-saidbar__notice-item">
+                    <div class="menu-saidbar__notice-title">
+                        Приближается крайний срок
+                    </div>
+                    <div class="menu-saidbar__notice-text">
+                        Крайний срок обращения "Несвободный тикет №101" (ООО "Фанат") истечёт <b>06.12.2017</b>
+                    </div>
+                    <div class="menu-saidbar__notice-time">
+                        <div class="menu-saidbar__notice-clock">16:27:12</div>
+                        <div class="menu-saidbar__notice-date">06.12.2017</div>
+                    </div>
+                </div>
+                <div class="menu-saidbar__notice-item">
+                    <div class="menu-saidbar__notice-title">
+                        Приближается крайний срок
+                    </div>
+                    <div class="menu-saidbar__notice-text">
+                        Крайний срок обращения "Несвободный тикет №101" (ООО "Фанат") истечёт <b>06.12.2017</b>
+                    </div>
+                    <div class="menu-saidbar__notice-time">
+                        <div class="menu-saidbar__notice-clock">16:27:12</div>
+                        <div class="menu-saidbar__notice-date">06.12.2017</div>
+                    </div>
+                </div>
+                <div class="menu-saidbar__notice-item">
+                    <div class="menu-saidbar__notice-title">
+                        Приближается крайний срок
+                    </div>
+                    <div class="menu-saidbar__notice-text">
+                        Крайний срок обращения "Несвободный тикет №101" (ООО "Фанат") истечёт <b>06.12.2017</b>
+                    </div>
+                    <div class="menu-saidbar__notice-time">
+                        <div class="menu-saidbar__notice-clock">16:27:12</div>
+                        <div class="menu-saidbar__notice-date">06.12.2017</div>
+                    </div>
+                </div>
+                <div class="menu-saidbar__notice-item">
+                    <div class="menu-saidbar__notice-title">
+                        Приближается крайний срок
+                    </div>
+                    <div class="menu-saidbar__notice-text">
+                        Крайний срок обращения "Несвободный тикет №101" (ООО "Фанат") истечёт <b>06.12.2017</b>
+                    </div>
+                    <div class="menu-saidbar__notice-time">
+                        <div class="menu-saidbar__notice-clock">16:27:12</div>
+                        <div class="menu-saidbar__notice-date">06.12.2017</div>
+                    </div>
+                </div>
+                <div class="menu-saidbar__notice-item">
+                    <div class="menu-saidbar__notice-title">
+                        Приближается крайний срок
+                    </div>
+                    <div class="menu-saidbar__notice-text">
+                        Крайний срок обращения "Несвободный тикет №101" (ООО "Фанат") истечёт <b>06.12.2017</b>
+                    </div>
+                    <div class="menu-saidbar__notice-time">
+                        <div class="menu-saidbar__notice-clock">16:27:12</div>
+                        <div class="menu-saidbar__notice-date">06.12.2017</div>
+                    </div>
+                </div>
+                <div class="menu-saidbar__notice-item">
+                    <div class="menu-saidbar__notice-title">
+                        Приближается крайний срок
+                    </div>
+                    <div class="menu-saidbar__notice-text">
+                        Крайний срок обращения "Несвободный тикет №101" (ООО "Фанат") истечёт <b>06.12.2017</b>
+                    </div>
+                    <div class="menu-saidbar__notice-time">
+                        <div class="menu-saidbar__notice-clock">16:27:12</div>
+                        <div class="menu-saidbar__notice-date">06.12.2017</div>
+                    </div>
+                </div>
+                <div class="menu-saidbar__notice-item">
+                    <div class="menu-saidbar__notice-title">
+                        Приближается крайний срок
+                    </div>
+                    <div class="menu-saidbar__notice-text">
+                        Крайний срок обращения "Несвободный тикет №101" (ООО "Фанат") истечёт <b>06.12.2017</b>
+                    </div>
+                    <div class="menu-saidbar__notice-time">
+                        <div class="menu-saidbar__notice-clock">16:27:12</div>
+                        <div class="menu-saidbar__notice-date">06.12.2017</div>
+                    </div>
+                </div>
+                <div class="menu-saidbar__notice-item">
+                    <div class="menu-saidbar__notice-title">
+                        Приближается крайний срок
+                    </div>
+                    <div class="menu-saidbar__notice-text">
+                        Крайний срок обращения "Несвободный тикет №101" (ООО "Фанат") истечёт <b>06.12.2017</b>
+                    </div>
+                    <div class="menu-saidbar__notice-time">
+                        <div class="menu-saidbar__notice-clock">16:27:12</div>
+                        <div class="menu-saidbar__notice-date">06.12.2017</div>
+                    </div>
+                </div>
+                <div class="menu-saidbar__notice-item">
+                    <div class="menu-saidbar__notice-title">
+                        Приближается крайний срок
+                    </div>
+                    <div class="menu-saidbar__notice-text">
+                        Крайний срок обращения "Несвободный тикет №101" (ООО "Фанат") истечёт <b>06.12.2017</b>
+                    </div>
+                    <div class="menu-saidbar__notice-time">
+                        <div class="menu-saidbar__notice-clock">16:27:12</div>
+                        <div class="menu-saidbar__notice-date">06.12.2017</div>
+                    </div>
+                </div>
+                <div class="menu-saidbar__notice-item">
+                    <div class="menu-saidbar__notice-title">
+                        Приближается крайний срок
+                    </div>
+                    <div class="menu-saidbar__notice-text">
+                        Крайний срок обращения "Несвободный тикет №101" (ООО "Фанат") истечёт <b>06.12.2017</b>
+                    </div>
+                    <div class="menu-saidbar__notice-time">
+                        <div class="menu-saidbar__notice-clock">16:27:12</div>
+                        <div class="menu-saidbar__notice-date">06.12.2017</div>
+                    </div>
+                </div>
+                <div class="menu-saidbar__notice-item">
+                    <div class="menu-saidbar__notice-title">
+                        Приближается крайний срок
+                    </div>
+                    <div class="menu-saidbar__notice-text">
+                        Крайний срок обращения "Несвободный тикет №101" (ООО "Фанат") истечёт <b>06.12.2017</b>
+                    </div>
+                    <div class="menu-saidbar__notice-time">
+                        <div class="menu-saidbar__notice-clock">16:27:12</div>
+                        <div class="menu-saidbar__notice-date">06.12.2017</div>
+                    </div>
+                </div>
+                <div class="menu-saidbar__notice-item">
+                    <div class="menu-saidbar__notice-title">
+                        Приближается крайний срок
+                    </div>
+                    <div class="menu-saidbar__notice-text">
+                        Крайний срок обращения "Несвободный тикет №101" (ООО "Фанат") истечёт <b>06.12.2017</b>
+                    </div>
+                    <div class="menu-saidbar__notice-time">
+                        <div class="menu-saidbar__notice-clock">16:27:12</div>
+                        <div class="menu-saidbar__notice-date">06.12.2017</div>
+                    </div>
+                </div>
+                <div class="menu-saidbar__notice-item">
+                    <div class="menu-saidbar__notice-title">
+                        Приближается крайний срок
+                    </div>
+                    <div class="menu-saidbar__notice-text">
+                        Крайний срок обращения "Несвободный тикет №101" (ООО "Фанат") истечёт <b>06.12.2017</b>
+                    </div>
+                    <div class="menu-saidbar__notice-time">
+                        <div class="menu-saidbar__notice-clock">16:27:12</div>
+                        <div class="menu-saidbar__notice-date">06.12.2017</div>
+                    </div>
+                </div>
+                <div class="menu-saidbar__notice-item">
+                    <div class="menu-saidbar__notice-title">
+                        Приближается крайний срок
+                    </div>
+                    <div class="menu-saidbar__notice-text">
+                        Крайний срок обращения "Несвободный тикет №101" (ООО "Фанат") истечёт <b>06.12.2017</b>
+                    </div>
+                    <div class="menu-saidbar__notice-time">
+                        <div class="menu-saidbar__notice-clock">16:27:12</div>
+                        <div class="menu-saidbar__notice-date">06.12.2017</div>
+                    </div>
+                </div>
+                <div class="menu-saidbar__notice-item">
+                    <div class="menu-saidbar__notice-title">
+                        Приближается крайний срок
+                    </div>
+                    <div class="menu-saidbar__notice-text">
+                        Крайний срок обращения "Несвободный тикет №101" (ООО "Фанат") истечёт <b>06.12.2017</b>
+                    </div>
+                    <div class="menu-saidbar__notice-time">
+                        <div class="menu-saidbar__notice-clock">16:27:12</div>
+                        <div class="menu-saidbar__notice-date">06.12.2017</div>
+                    </div>
+                </div>
+                <div class="menu-saidbar__notice-item">
+                    <div class="menu-saidbar__notice-title">
+                        Приближается крайний срок
+                    </div>
+                    <div class="menu-saidbar__notice-text">
+                        Крайний срок обращения "Несвободный тикет №101" (ООО "Фанат") истечёт <b>06.12.2017</b>
+                    </div>
+                    <div class="menu-saidbar__notice-time">
+                        <div class="menu-saidbar__notice-clock">16:27:12</div>
+                        <div class="menu-saidbar__notice-date">06.12.2017</div>
+                    </div>
+                </div>
+                <div class="menu-saidbar__notice-item">
+                    <div class="menu-saidbar__notice-title">
+                        Приближается крайний срок
+                    </div>
+                    <div class="menu-saidbar__notice-text">
+                        Крайний срок обращения "Несвободный тикет №101" (ООО "Фанат") истечёт <b>06.12.2017</b>
+                    </div>
+                    <div class="menu-saidbar__notice-time">
+                        <div class="menu-saidbar__notice-clock">16:27:12</div>
+                        <div class="menu-saidbar__notice-date">06.12.2017</div>
+                    </div>
+                </div>
+                <div class="menu-saidbar__notice-item">
+                    <div class="menu-saidbar__notice-title">
+                        Приближается крайний срок
+                    </div>
+                    <div class="menu-saidbar__notice-text">
+                        Крайний срок обращения "Несвободный тикет №101" (ООО "Фанат") истечёт <b>06.12.2017</b>
+                    </div>
+                    <div class="menu-saidbar__notice-time">
+                        <div class="menu-saidbar__notice-clock">16:27:12</div>
+                        <div class="menu-saidbar__notice-date">06.12.2017</div>
+                    </div>
+                </div>
+                <div class="menu-saidbar__notice-item">
+                    <div class="menu-saidbar__notice-title">
+                        Приближается крайний срок
+                    </div>
+                    <div class="menu-saidbar__notice-text">
+                        Крайний срок обращения "Несвободный тикет №101" (ООО "Фанат") истечёт <b>06.12.2017</b>
+                    </div>
+                    <div class="menu-saidbar__notice-time">
+                        <div class="menu-saidbar__notice-clock">16:27:12</div>
+                        <div class="menu-saidbar__notice-date">06.12.2017</div>
+                    </div>
+                </div>
+                <div class="menu-saidbar__notice-item">
+                    <div class="menu-saidbar__notice-title">
+                        Приближается крайний срок
+                    </div>
+                    <div class="menu-saidbar__notice-text">
+                        Крайний срок обращения "Несвободный тикет №101" (ООО "Фанат") истечёт <b>06.12.2017</b>
+                    </div>
+                    <div class="menu-saidbar__notice-time">
+                        <div class="menu-saidbar__notice-clock">16:27:12</div>
+                        <div class="menu-saidbar__notice-date">06.12.2017</div>
+                    </div>
+                </div>
+                <div class="menu-saidbar__notice-item">
+                    <div class="menu-saidbar__notice-title">
+                        Приближается крайний срок
+                    </div>
+                    <div class="menu-saidbar__notice-text">
+                        Крайний срок обращения "Несвободный тикет №101" (ООО "Фанат") истечёт <b>06.12.2017</b>
+                    </div>
+                    <div class="menu-saidbar__notice-time">
+                        <div class="menu-saidbar__notice-clock">16:27:12</div>
+                        <div class="menu-saidbar__notice-date">06.12.2017</div>
+                    </div>
+                </div>
+                <div class="menu-saidbar__notice-item">
+                    <div class="menu-saidbar__notice-title">
+                        Приближается крайний срок
+                    </div>
+                    <div class="menu-saidbar__notice-text">
+                        Крайний срок обращения "Несвободный тикет №101" (ООО "Фанат") истечёт <b>06.12.2017</b>
+                    </div>
+                    <div class="menu-saidbar__notice-time">
+                        <div class="menu-saidbar__notice-clock">16:27:12</div>
+                        <div class="menu-saidbar__notice-date">06.12.2017</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <script src="app/js/jquery-3.2.1.min.js"></script>
 <script src="app/js/jquery.validate.min.js"></script>
 <script src="app/js/slick.min.js"></script>
