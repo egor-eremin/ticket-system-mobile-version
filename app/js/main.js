@@ -7,7 +7,7 @@ $(document).ready(function () {
         });
     }
     (function createCustomSelect() {
-        CustomSelect('.custom-select',"Выберите категорию",'.custom-select-wrapper');
+        CustomSelect('#category',"Выберите категорию",'.category-select');
     })();
     (function editPathFile() {
         $(".custom-input-file input").change(function(e){
@@ -91,6 +91,9 @@ $(document).ready(function () {
             $('.footer-menu').removeClass('show-notice');
             $('.menu-saidbar').removeClass('active');
         });
+    })();
+    (function showFilter() {
+        $(document).on('click', '')
     })();
 });
 BX.ready(function(){
