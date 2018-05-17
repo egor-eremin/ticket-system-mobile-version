@@ -8,6 +8,8 @@ $(document).ready(function () {
     }
     (function createCustomSelect() {
         CustomSelect('#category',"Выберите категорию",'.category-select');
+        CustomSelect('#filter-category', 'Выберите категорию','.filter-category__wrapper');
+        CustomSelect('#filter-status', 'Выберите статус', '.filter-status__wrapper');
     })();
     (function editPathFile() {
         $(".custom-input-file input").change(function(e){
@@ -24,7 +26,7 @@ $(document).ready(function () {
         });
     })();
     (function createCustomDatepicker() {
-        $('.add-form__datapicker, .custom-datpicker').datepicker({
+        $('.add-form__datapicker, .custom-datpicker, #filter-date').datepicker({
             minDate: new Date(),
         });
     })();
@@ -63,9 +65,11 @@ $(document).ready(function () {
             if ($('.footer-menu').hasClass('menu-footer_show')) {
                 $('.footer-menu').removeClass('menu-footer_show');
                 $('.close-wrapper').removeClass('active');
+                $('body').css('overflow-y','auto')
             } else {
                 $('.footer-menu').addClass('menu-footer_show');
                 $('.close-wrapper').addClass('active');
+                $('body').css('overflow-y', 'hidden');
             }
         });
     })();
@@ -74,6 +78,27 @@ $(document).ready(function () {
             e.preventDefault();
             $(this).removeClass('active');
             $('.footer-menu').removeClass('menu-footer_show');
+        });
+    })();
+    (function showFilter() {
+        $(document).on('click', '.filter', function () {
+            if ($('.footer-menu').hasClass('show-filter')) {
+                $('.footer-menu').removeClass('show-filter');
+                $('.close-filter-wrapper').removeClass('active');
+                $('body').css('overflow-y','auto');
+            } else {
+                $('.footer-menu').addClass('show-filter');
+                $('.close-filter-wrapper').addClass('active');
+                $('body').css('overflow-y','hidden');
+            }
+        })
+    })();
+    (function hideFilter() {
+        $(document).on('click', '.close-filter-wrapper', function (e) {
+           e.preventDefault();
+           $(this).removeClass('active');
+            $('.footer-menu').removeClass('show-filter');
+            $('body').css('overflow-y','auto');
         });
     })();
     (function showNotice() {
@@ -94,6 +119,52 @@ $(document).ready(function () {
     })();
     (function showFilter() {
         $(document).on('click', '')
+    })();
+    (function showLeadTimeModal() {
+        $('.add-lead-time').magnificPopup({
+            items: {
+                src: '.lead-time-popup'
+            },
+            type: 'inline',
+        });
+    })();
+    (function addMakOnHourInput() {
+        $('.hour-input').mask("a#", {
+            "#": {pattern: "^[0-9]+$"},
+            translation: {
+                'a': {
+                    pattern: "[1-9]",
+                }
+            }
+        });
+    })();
+    (function addMakOnMinutesInput() {
+        $('.minutes-input').mask("ab", {
+            translation: {
+                'a': {
+                    pattern: "[1-9]",
+                },
+                'b': {
+                    pattern: "[0-9]?",
+                }
+            }
+        });
+    })();
+    (function openEditTicket() {
+        $('#open-edit-popup').magnificPopup({
+            removalDelay:1000,
+            mainClass: 'change-popup mfp-fade',
+            focus: '.input-edit-ticket',
+            items: {
+                src: '.change-ticket',
+                type: 'inline',
+            },
+            tClose: 'Закрыть',
+        });
+        $(document).on('click', '#close-change-form', function (e) {
+            e.preventDefault();
+            $.magnificPopup.close();
+        })
     })();
 });
 BX.ready(function(){
