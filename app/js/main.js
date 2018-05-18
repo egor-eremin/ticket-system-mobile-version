@@ -10,6 +10,10 @@ $(document).ready(function () {
         CustomSelect('#category',"Выберите категорию",'.category-select');
         CustomSelect('#filter-category', 'Выберите категорию','.filter-category__wrapper');
         CustomSelect('#filter-status', 'Выберите статус', '.filter-status__wrapper');
+        CustomSelect('#edit-category', 'Выберите категорию', '.custom-select-edit');
+        CustomSelect('#executor', 'Исполнитель', '.select-executor-wrapper');
+        CustomSelect('#select_tester', 'Тестировщик', '.select-tester-wrapper');
+        CustomSelect('#change_status', 'Статус', '.change-status-wrapper');
     })();
     (function editPathFile() {
         $(".custom-input-file input").change(function(e){

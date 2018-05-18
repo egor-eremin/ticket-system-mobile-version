@@ -518,8 +518,8 @@ h1, h2 {
     padding-top: 37px;
     padding-bottom: 80px;
 }
-.add-ticket__h1 {
-    margin-bottom: 1.125rem;
+.main-h1 {
+    margin-bottom: 1.875rem;
 }
 .add-form__item {
     display: flex;
@@ -669,6 +669,12 @@ h1, h2 {
     justify-content: center;
     align-items: center;
     border: 1px solid transparent;
+}
+.form-input {
+    height: 45px;
+    padding: 14px 15px;
+    border: 1px solid #dadbdb;
+    width: 100%;
 }
 .custom-checkbox input:checked ~ label:not(.error)::after {
     color: #fff;
@@ -1598,8 +1604,8 @@ b {
 }
 .border-bottom {
     border-bottom: 1px solid #f5f6f7;
-    padding-bottom: 25px;
-    margin-bottom: 18px;
+    padding-bottom: 1.5625rem;
+    margin-bottom: 1.125rem;
 }
 .ticket-body__content {
     font-size: 0.875rem;
@@ -1648,9 +1654,10 @@ b {
     color: #83838d;
 }
 .ticket-body__files-item {
-    margin-right: 20px;
+    margin-right: 25px;
     margin-bottom: 7px;
     position: relative;
+    font-size: 0.8125rem;
 }
 .download-all {
     font-weight: 300;
@@ -1800,6 +1807,7 @@ b {
 }
 .change-time {
     display: flex;
+    align-items: flex-start;
 }
 .change-time__item {
     text-align: center;
@@ -1819,14 +1827,19 @@ b {
 .change-ticket {
     position: relative;
     display: flex;
-    width: calc(100% - 624px);
+    width: 100%;
     margin: 0 auto;
-    min-width: 1280px;
+    max-width: 1024px;
+    font-size: 0.875rem;
+    line-height: 1.4;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 .change-ticket__form {
     width: 100%;
     padding: 30px;
     background-color: #fff;
+    font-size: 0.875rem;
 }
 .input-edit-ticket {
     width: 100%;
@@ -1840,13 +1853,173 @@ b {
     font-family: "Roboto Slab", sans-serif;
     font-weight: 700;
     font-size: 1.5rem;
-    margin-top: 1.125rem;
+    margin-top: 1.5rem;
 }
 .change-ticket__item {
-    font-size: 0.875rem;
+    /*font-size: 0.875rem;*/
     margin-bottom: 1.25rem;
-    margin-top: 1.5625rem;
+    /*margin-top: 1.0625rem;*/
 }
+.custom-checkbox_client-card {
+    padding-left: 25px;
+    position: relative;
+}
+.check-status::before {
+    content: "\f00c";
+    border-radius: 2px;
+    width: 15px;
+    height: 15px;
+    display: flex;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+    font-size: 9px;
+    line-height: 9px;
+    font-family: FontAwesome;
+}
+.checked::before {
+    background-color: #8cc63f;
+}
+.not-checked::before {
+    background-color: #fc4a4a;
+}
+.important-ticket label {
+    cursor: pointer;
+}
+.important-ticket i {
+    transition: .3s ease-in-out;
+    font-size: 1.125rem;
+    margin-left: 5px;
+}
+.important-ticket input:checked + label i {
+    color: #fc3131;
+}
+.change-ticket__item .select2 {
+    max-width: 350px;
+    width: 100% !important;
+}
+.ticket-text-edit {
+    border: 1px solid #dadbdb;
+    width: 100%;
+    height: 250px;
+    resize: none;
+    padding: 14px 15px;
+}
+.del-icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 17px;
+    height: 17px;
+    transform: translate(90%, -90%);
+    cursor: pointer;
+}
+.del-icon span {
+    width: 14px;
+    height: 2px;
+    background-color: #d4d4d4;
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    border-radius: 20px;
+    transition: .3s ease-in-out;
+}
+.del-icon span:first-child {
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+.del-icon span:last-child {
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+.del-icon:hover span {
+    background-color: #83838d;
+}
+.change-ticket__item-flex {
+    display: flex;
+    align-items: center;
+}
+.change-ticket__item:last-child {
+    margin-bottom: 0;
+}
+.change-ticket__item .custom-input-file {
+    margin-right: 22px;
+}
+.datapicker {
+    margin-left: 15px;
+    padding: 14px 36px 14px 15px;
+}
+.change-ticket__item .datapicker {
+    border: 1px solid #dadbdb;
+}
+.custom-datapicker input {
+    height: 45px;
+}
+.allocated__label input {
+    margin-right: 5px;
+    text-align: center;
+    width: 100px;
+}
+.important-ticket {
+    margin-top: 1.0625rem;
+}
+.change-time .change-ticket__item {
+    margin-right: 30px;
+}
+.allocated__title {
+    margin-right: 15px;
+}
+.allocated__label {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 15px;
+}
+.allocated__label input {
+    margin-right: 5px;
+    text-align: center;
+    width: 100px;
+}
+.change-executor {
+    display: flex;
+    align-items: center;
+}
+.change-time .change-ticket__item, .change-executor .change-ticket__item {
+    margin-bottom: 0;
+}
+.change-executor .change-ticket__item {
+    margin-bottom: 0;
+    margin-right: 30px;
+    width: calc(50% - 30px);
+}
+.form-label_mar-right {
+    margin-right: 15px;
+}
+.select2-container--open .select2-dropdown--below {
+    border-radius: 0 !important;
+    border-color: #dadbdb !important;
+}
+.change-ticket__item .select2 {
+    width: 100% !important;
+    max-width: 350px;
+}
+.select-executor-wrapper, .select-tester-wrapper, .change-status-wrapper {
+    flex-grow: 1;
+}
+.select-status {
+    width: 50%;
+}
+.mfp-container {
+    padding: 0;
+}
+.change-ticket .ticket-body__files-item {
+    margin-bottom: 20px;
+}
+
+
 @-webkit-keyframes slide-top {
     0% {
         -webkit-transform: translateY(0);
@@ -1867,6 +2040,42 @@ b {
         transform: translateY(-10px);
     }
 }
+
+@media (max-width: 1024px) {
+    .change-ticket {
+        width: calc(100% - 30px);
+    }
+}
+@media (max-width: 1000px) {
+    .change-time, .change-executor {
+        flex-direction: column;
+    }
+    .change-executor {
+        align-items: flex-start;
+    }
+    .change-time .change-ticket__item + .change-ticket__item, .change-executor .change-ticket__item + .change-ticket__item {
+        margin-top: 20px;
+    }
+    .change-time .change-ticket__item, .change-executor .change-ticket__item, .select-status {
+        margin-right: 0;
+        width: 70%;
+    }
+    .change-time .custom-datapicker {
+        display: flex;
+        align-items: center;
+    }
+    .change-time .deadline-datapicker-wrapper {
+        flex-grow: 1;
+        margin-left: 15px;
+    }
+    .change-time .datapicker {
+        width: 100%;
+        margin-left: 0;
+    }
+    .change-ticket__item .select2 {
+        max-width: 100%;
+    }
+}
 @media (max-width: 900px) {
     .tickets__item {
         width: 100%;
@@ -1878,10 +2087,10 @@ b {
 }
 @media (max-width:  760px) {
     .ticket-page-wrapper {
-        flex-direction: column-reverse;
+        flex-direction: column;
     }
     .ticket-body {
-        padding: 0;
+        padding: 37px 0 0 0;
         border: none;
     }
     .ticket-information {
@@ -1960,6 +2169,40 @@ b {
     .form-label__datapicker-date {
         margin-left: 0;
     }
+    .main-h1 {
+        font-size: 2rem;
+    }
+    .change-ticket .change-time .custom-datapicker {
+        flex-direction: row;
+    }
+    .change-ticket__form {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .change-time .change-ticket__item, .change-executor .change-ticket__item, .select-status {
+        width: 100%;
+    }
+    .change-ticket .ticket-body__title {
+        margin-top: 0;
+    }
+    .change-ticket__choose-file {
+        flex-direction: column;
+        align-items: flex-start;
+        display: inline-flex;
+    }
+    .change-ticket__choose-file .custom-input-file {
+        margin-right: 0;
+    }
+    /*.allocated {*/
+        /*flex-direction: column;*/
+        /*align-items: flex-start;*/
+    /*}*/
+    .allocated__label {
+        flex-direction: column;
+    }
+    .change-ticket .list-add-files {
+        margin-left: 15px !important;
+    }
 }
 @media (max-width: 440px) {
     .menu-saidbar__menu {
@@ -1996,5 +2239,37 @@ b {
     }
     .time-block {
         width: 100%;
+    }
+    .allocated {
+        flex-wrap: wrap;
+    }
+    .allocated__title {
+        width: 100%;
+        margin-bottom: 9px;
+    }
+    .executor, .tester, .select-status {
+        flex-wrap: wrap;
+    }
+    .executor .form-label, .tester .form-label, .select-status .form-label {
+        width: 100%;
+        margin-bottom: 9px;
+    }
+    .change-ticket .custom-datapicker {
+        flex-wrap: wrap;
+    }
+    .change-ticket .deadline-datapicker-wrapper {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 9px;
+        position: relative;
+    }
+    .custom-input-file__label {
+        padding: 14px 25px;
+    }
+    .change-ticket__buttons {
+        text-align: center;
+    }
+    .change-ticket__buttons button:last-child {
+        margin-right: 0;
     }
 }

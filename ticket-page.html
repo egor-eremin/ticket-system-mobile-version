@@ -60,7 +60,7 @@
 <main class="main-block ticket-page">
     <div class="template-wrapper ticket-page-wrapper">
         <div class="ticket-body">
-            <h1 class="add-ticket__h1">
+            <h1 class="main-h1">
                 Добавить документы по 152 ФЗ
             </h1>
             <div class="other-information border-bottom">
@@ -72,6 +72,12 @@
                 </div>
                 <div class="other-information__item">
                     Категория: Контент
+                </div>
+                <div class="other-information__item custom-checkbox_client-card">
+                    <span class="check-status checked">Нужна помощь с выбором категории</span>
+                </div>
+                <div class="other-information__item custom-checkbox_client-card">
+                    <span class="check-status not-checked">Нужна помощь с выбором категории</span>
                 </div>
             </div>
             <div class="ticket-body__content border-bottom">
@@ -317,6 +323,9 @@
             </div>
         </div>
     </div>
+    <div class="template-wrapper">
+
+    </div>
     <div class="change-ticket mfp-hide">
         <form id="change-form" class="ticket-body__main change-ticket__form" action="#" method="post">
             <div class="ticket-body__head border-bottom">
@@ -333,7 +342,7 @@
                     </label>
                 </div>
                 <div class="custom-select-wrapper change-ticket__item custom-select-edit">
-                    <select class="custom-select" name="category-ticket" id="category">
+                    <select class="custom-select" name="category-ticket" id="edit-category">
                         <option></option>
                         <option>
                             Добавить информацию на сайт
@@ -421,7 +430,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="change-ticket__item change-ticket__item-flex">
+                <div class="change-ticket__choose-file change-ticket__item change-ticket__item-flex">
                     <div class="custom-input-file">
                         <input multiple type="file" name="additional-file" id="additional-file-input">
                         <label class="custom-input-file__label form-label" for="additional-file-input">
@@ -487,7 +496,7 @@
                         </select>
                     </div>
                 </div>
-                <div class="change-ticket__item change-ticket__item-flex">
+                <div class="change-ticket__item tester change-ticket__item-flex">
                     <label class="form-label form-label_mar-right" for="select_tester">Тестировщик:</label>
                     <div class="select-tester-wrapper">
                         <select class="select-tester" name="select-tester" id="select_tester">
@@ -518,8 +527,8 @@
                     </div>
                 </div>
             </div>
-            <div class="ticket-body__button">
-                <button id="submit-change-form" class="button button-green button-small button__edit-ticket">
+            <div class="ticket-body__button change-ticket__buttons">
+                <button id="submit-change-form" class="button button-small button__edit-ticket">
                     Сохранить
                     <i class="fas fa-pencil-alt"></i>
                 </button>
